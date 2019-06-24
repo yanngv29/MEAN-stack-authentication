@@ -1,0 +1,63 @@
+<app-loading [condition]="isLoading"></app-loading>
+
+<div *ngIf="user" class="container">
+  <app-page-header [title]="title"></app-page-header>
+  <div class="row">
+    <div class="col-md-4 col-sm-12 col-centered">
+      <ul id="students-info-ul">
+        <li *ngFor="let course of courses" >
+            <div class="info" >
+                <span class="title">{{course._id}}</span>
+                <span class="title">{{course.duration}}</span>
+                <span class="title">{{course.distance}}</span>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row"><hr flex/></div>
+  <div class="row"><app-page-header [title]="titleAdd"></app-page-header></div>
+  <div class="row">
+    <div class="col-md-4 col-sm-12 col-centered">
+      <div class="form-wrap">
+        <form [formGroup]="editForm" (ngSubmit)="save(course)">
+          <div class="input-wrap">
+            <mat-form-field>
+              <span matPrefix>
+                <i class="prefix fa fa-clock-o"></i>
+              </span>
+              <input matInput #input type="number" minlength="1" maxlength="3" name="duration" [(ngModel)]="course.duration" [formControl]="duration"
+                placeholder="Duration">
+              <mat-hint align="end">{{input.value?.length || 0}}/30</mat-hint>
+              <mat-error *ngIf="duration.hasError('minlength')">
+                Duration must contain at least 1 characters
+              </mat-error>
+              <mat-error *ngIf="duration.hasError('required')">
+                Duration is
+                <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="input-wrap">
+            <mat-form-field>
+              <span matPrefix>
+                <i class="prefix fa fa-road"></i>
+              </span>
+              <input matInput type="number" name="distance" [(ngModel)]="course.distance" [formControl]="distance" placeholder="Distance">
+              <mat-error *ngIf="distance.hasError('minlength')">
+                Distance must contain at least 1 characters
+              </mat-error>
+              <mat-error *ngIf="distance.hasError('required')">
+                Distance is
+                <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <button mat-raised-button type="submit" [disabled]="!editForm.valid" color="accent">
+            <i class="fa fa-paper-plane"></i> Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataSource } from '@angular/cdk/collections';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+import { Observable, of } from 'rxjs';
 
 import { ToastComponent } from '../../shared/toast/toast.component';
 import { AuthService } from '../../services/auth.service';
@@ -67,7 +66,7 @@ export class TableDataSource extends DataSource<any> {
   }
   /** Connect function called by the table to retrieve one stream containing the data to render. */
   connect(): Observable<User[]> {
-    return Observable.of(this.data);
+    return of(this.data);
   }
 
   disconnect() { }
