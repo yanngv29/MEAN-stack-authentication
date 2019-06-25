@@ -29,7 +29,7 @@ const mongodb = mongoose.connect(mongodbURI, {useNewUrlParser: true}); //, { use
 
 mongodb
   .then((db) => {
-    console.log('Connected to MongoDB on', db.host + ':' + db.port);
+    console.log('Connected to MongoDB on ', mongodbURI);
 
     setRoutes(app);
 
