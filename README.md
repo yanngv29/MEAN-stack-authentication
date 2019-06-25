@@ -1,4 +1,4 @@
-# MEAN stack minimongo boilerplate
+# MEAN stack minimongo serviceworker boilerplate
 MEAN stack authentication and minimongo / service worker on Angular6 and AngularMaterial6
 
 service worker installation is at minimal configuration.

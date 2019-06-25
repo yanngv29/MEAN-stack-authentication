@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "author": "Yann Guillerm @yanngv29 && Leonardo Maglio  @leota",
-  "description": "MEAN stack authentication & minimongo boilerplate with Angular 6 and Angular Material.",
+  "description": "MEAN stack authentication & minimongo & serviceworker boilerplate with Angular 6 and Angular Material.",
   "angular-cli": {},
   "engines": {
     "node": "10.15.3",
