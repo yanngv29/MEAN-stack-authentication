@@ -1,3 +1,10 @@
+# MEAN stack minimongo boilerplate
+MEAN stack authentication and minimongo / service worker on Angular6 and AngularMaterial6
+
+service worker not yet working
+
+fork from leota/MEAN-stack-authentication
+
 # MEAN-stack-authentication
 MEAN stack authentication boilerplate with Angular5 and AngularMaterial2.
 
@@ -15,7 +22,7 @@ MEAN stack authentication boilerplate with Angular5 and AngularMaterial2.
 A window will automatically open at [localhost:4200](http://localhost:4200). Angular and Express files are being watched. Any change automatically creates a new bundle, restart Express server and reload your browser.
 
 ### Production mode
-`npm run prod`: run the project with a production bundle and AOT compilation listening at [localhost:3000](http://localhost:3000) 
+`npm run prod`: run the project with a production bundle and AOT compilation listening at [localhost:3000](http://localhost:3000)
 
 ## Further help
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

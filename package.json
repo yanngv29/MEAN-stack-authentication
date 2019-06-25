@@ -1,13 +1,13 @@
 {
-  "name": "MEAN-stack-authentication",
+  "name": "MEAN-stack-authentication-minimongo",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "Leonardo Maglio  @leota",
-  "description": "MEAN stack authentication boilerplate with Angular 5 and Angular Material.",
+  "author": "Yann Guillerm @yanngv29 && Leonardo Maglio  @leota",
+  "description": "MEAN stack authentication & minimongo boilerplate with Angular 6 and Angular Material.",
   "angular-cli": {},
   "engines": {
-    "node": "6.11.4",
-    "npm": "3.10.10"
+    "node": "10.15.3",
+    "npm": "6.9.0"
   },
   "scripts": {
     "ng": "ng",

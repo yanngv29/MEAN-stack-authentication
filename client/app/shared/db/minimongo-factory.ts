@@ -1,5 +1,6 @@
 
 import * as minimongo  from "minimongo";
+import { environment } from './../../../environments/environment';
 
 export class MinimongoFactory {
   private static _localDb: minimongo.IndexedDb = null;
@@ -49,7 +50,7 @@ export class MinimongoFactory {
   private initDatabase(): void {
     var token = localStorage.getItem('token');
     this.localDb = new minimongo.IndexedDb({namespace: "spminipoc"});
-    this.remoteDb = new minimongo.RemoteDb('http://localhost:4200/api/db/',token);
+    this.remoteDb = new minimongo.RemoteDb('http://localhost:' + (environment.port || 3000) + '/api/db/',token);
     this.db = new minimongo.HybridDb(this.localDb,this.remoteDb);
     this.localDb.addCollection('courses');
     this.remoteDb.addCollection('courses');
